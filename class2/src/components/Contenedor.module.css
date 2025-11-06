@@ -1,0 +1,10 @@
+.contenedor{
+    border: 2px solid white;
+    border-radius: 8px;
+    padding: 20px;
+    color: aqua;
+}
+
+.titulo{
+    text-align: center;
+}
