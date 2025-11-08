@@ -1,16 +1,62 @@
-# React + Vite
+# Clase 1: Introducción a React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Primera clase del curso de React desde cero.
 
-Currently, two official plugins are available:
+## 📚 Contenido de la Clase
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Configuración del Proyecto
+- React 19.1.1
+- Vite 7.1.7 + plugin React SWC
+- ESLint
 
-## React Compiler
+### Conceptos Vistos
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+#### 1. Componente Funcional
+```jsx
+const App = () => {
+  return (
+    // JSX
+  )
+}
+```
 
-## Expanding the ESLint configuration
+#### 2. JSX y Fragments
+Uso de fragments (`<>...</>`) para agrupar elementos:
+```jsx
+<>
+  <h1>Hola, React!</h1>
+  <ul>
+    {/* contenido */}
+  </ul>
+</>
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+#### 3. Renderizado de Listas
+Uso de `.map()` para renderizar arrays:
+```jsx
+const nombres = ["Ana", "Luis", "Carlos", "Ivan"];
+
+{nombres.map(nombre => <li key={nombre}>{nombre}</li>)}
+```
+
+#### 4. Punto de Entrada (main.jsx)
+```jsx
+import { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
+import App from './App.jsx'
+
+createRoot(document.getElementById('root')).render(
+  <StrictMode>
+    <App />
+  </StrictMode>
+)
+```
+
+## 🚀 Scripts Disponibles
+
+```bash
+pnpm dev      # Modo desarrollo
+pnpm build    # Compilar para producción
+pnpm preview  # Vista previa de la build
+pnpm lint     # Ejecutar ESLint
+```
