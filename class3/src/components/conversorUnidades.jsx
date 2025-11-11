@@ -6,16 +6,17 @@ const ConversorUnidades = () => {
     const factorDeConversion = 3.28084; // 1 metro = 3.18084 pies
     //Convertir a pies = metros * factorDeConversion
     //Convertir a metros = metros / factorDeConversion
-    let calculoMetrosAPies = 0;
 
     const manejarCambioMetros = (e) => {
         const value = e.target.value;
         const n = Number(value);
 
         //Validar que la entrada sea un numero o este vacia
+        // isNaN devuelve true si no es un numero
+        // !isNaN devuelve true si es un numero
         if(!isNaN(n) || value === ""){
             setMetros(n)
-            calculoMetrosAPies = n * factorDeConversion; //Numero
+            const calculoMetrosAPies = n * factorDeConversion; //Esto es un Numero
             setPies(String(calculoMetrosAPies));
         }
     }
@@ -25,9 +26,11 @@ const ConversorUnidades = () => {
         const n = Number(value);
 
         //Validar que la entrada sea un numero o este vacia
+        // isNaN devuelve true si no es un numero
+        // !isNaN devuelve true si es un numero
         if(!isNaN(n) || value === ""){
             setPies(n)
-            const calculoPiesAMetros = n / factorDeConversion; //Numero
+            const calculoPiesAMetros = n / factorDeConversion; //Esto es un Numero
             setMetros(String(calculoPiesAMetros));
         }
     }
@@ -42,7 +45,6 @@ const ConversorUnidades = () => {
                 placeholder="Escribe en metros"
                 onChange={e => manejarCambioMetros(e)}
             />
-            <p>El valor convertido a pies es: {calculoMetrosAPies}</p>
             <input 
                 type="text"
                 value={pies}
