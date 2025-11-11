@@ -4,7 +4,8 @@ const ConversorUnidades = () => {
     const [metros, setMetros] = useState('');
     const [pies, setPies] = useState('')
     const factorDeConversion = 3.28084; // 1 metro = 3.18084 pies
-    //Formula = metros * factorDeConversion;
+    //Convertir a pies = metros * factorDeConversion
+    //Convertir a metros = metros / factorDeConversion
     let calculoMetrosAPies = 0;
 
     const manejarCambioMetros = (e) => {
