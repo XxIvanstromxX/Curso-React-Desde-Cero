@@ -1,0 +1,66 @@
+.x-follow-card{
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-size: .8rem;
+    justify-content: space-between;
+    max-width: 350px;
+    min-width: 350px;
+}
+
+.x-follow-card-header{
+    display: flex;
+    align-items: center;
+    gap: 4px
+}
+
+.x-user-name{
+    display: flex;
+    flex-direction: column;
+}
+
+.x-account{
+    opacity: .6;
+}
+
+.x-img-user {
+    height: 48px;
+    width: 48px;
+    border-radius: 1000px;
+}
+
+.x-follow{
+    cursor: pointer;
+    margin-left: 16px;
+    border: 1px solid #000;
+    border-radius: 999px;
+    padding: 6px 16px;
+    font-weight: bold;
+    transition: .3s ease bakgound-color;
+}
+
+.unfollow{
+    display: none;
+}
+
+.x-follow.is-following{
+    background: transparent;
+    border: 1px solid rgba(214, 209, 209, 0.74);
+    color: #fff;
+    width: 140px;
+    transition: .2s ease all;
+}
+
+
+.x-follow.is-following:hover{
+    background: rgba(246, 15, 15, 0.308);
+    color: red;
+    border: 1px solid red;
+
+    .unfollow{
+        display: block;
+    }
+    .x-button-text{
+        display: none;
+    }
+}
