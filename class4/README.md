@@ -1,16 +1,29 @@
-# React + Vite
+# Clase 4: Renderizado Condicional y Listas en React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+En esta carpeta se encuentran los ejercicios y ejemplos prácticos correspondientes a la cuarta clase del curso.
 
-Currently, two official plugins are available:
+## Temas Vistos
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### 1. Renderizado Condicional
+Se exploran diferentes técnicas para mostrar u ocultar componentes basándose en el estado o props:
+- Operador ternario (`condicion ? verdadero : falso`)
+- Operador lógico AND (`condicion && componente`)
+- `if/else` dentro de la lógica del componente.
 
-## React Compiler
+### 2. Listas y Keys
+Aprendemos a renderizar listas de elementos dinámicamente:
+- Uso del método `.map()` para transformar arrays de datos en elementos JSX.
+- Importancia de la prop `key` para el rendimiento y la identidad de los elementos en React.
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+### 3. Ejemplo Práctico: Tarjetas de Usuario
+Implementación de un componente `CardX` que simula una tarjeta de perfil (similar a Twitter/X):
+- Renderizado de una lista de usuarios desde un array de objetos.
+- Manejo de estado individual para el botón de "Seguir/Siguiendo".
+- Estilizado de componentes.
 
-## Expanding the ESLint configuration
+## Estructura de Archivos Relevantes
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- `src/App.jsx`: Componente principal donde se orquestan los ejemplos.
+- `src/components/renderCondicional.jsx`: Ejemplo de renderizado condicional.
+- `src/components/listaDinamica.jsx`: Ejemplo básico de listas.
+- `src/components/cardX.jsx`: Componente de tarjeta de usuario.
